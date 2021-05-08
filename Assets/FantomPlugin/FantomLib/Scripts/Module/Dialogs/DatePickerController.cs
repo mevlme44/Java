@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace FantomLib
@@ -15,7 +16,7 @@ namespace FantomLib
     /// (Theme[Style])
     /// https://developer.android.com/reference/android/R.style.html#Theme
     /// </summary>
-    public class DatePickerController : MonoBehaviour
+    public class DatePickerController : MonoBehaviour, IPointerClickHandler
     {
         //Inspector Settings
         public Text Date; 
@@ -72,6 +73,10 @@ namespace FantomLib
                 OnResult.Invoke(result);
                 Date.text = result;
             }
+        }
+
+        public void OnPointerClick(PointerEventData eventData) {
+            Show("20/10/2021");
         }
     }
 }
