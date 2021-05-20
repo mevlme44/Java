@@ -35,7 +35,6 @@ namespace Interface
             Name = name;
             Date = date;
             Coordinates = coords;
-            PlayerPrefs.Save();
         }
     }
 }

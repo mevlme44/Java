@@ -14,7 +14,6 @@ public class Save : MonoBehaviour
     }
 
     public void OnConfrim() {
-        ButtonTemplate.Instantiate(Name.text, Date.text, Vector2.one);
-        //PlayerPrefs.SetString(Name.text, Date.text);
+        Event
     }
 }

@@ -2055,7 +2055,7 @@ MonoBehaviour:
   redrawOnPlay: 1
   renderInThread: 1
   resourcesPath: OnlineMapsTiles/{zoom}/{x}/{y}
-  showMarkerTooltip: 0
+  showMarkerTooltip: 1
   source: 0
   stopPlayingWhenScriptsCompile: 1
   texture: {fileID: 2800000, guid: 8c8c2aaaf9942fa41a3d27ec229672f1, type: 3}
@@ -2065,7 +2065,7 @@ MonoBehaviour:
   trafficProviderID: googlemaps
   useCurrentZoomTiles: 0
   useProxy: 1
-  useSoftwareJPEGDecoder: 0
+  useSoftwareJPEGDecoder: 1
   width: 1024
   _activeTypeSettings: 
   _zoom: 2
