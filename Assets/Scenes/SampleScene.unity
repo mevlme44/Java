@@ -695,28 +695,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 375074882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 658160019}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!114 &292403760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -957,6 +935,7 @@ GameObject:
   - component: {fileID: 419629634}
   - component: {fileID: 419629633}
   - component: {fileID: 419629632}
+  - component: {fileID: 419629636}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1045,6 +1024,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &419629636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419629631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d3c8df88e74a648bafecd3a980b26b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentMode: 0
+  CreateUI: {fileID: 375074882}
+  EventsUI: {fileID: 658160019}
+  CreateEventButton: {fileID: 1094345671}
+  EventTemplate: {fileID: 1722518855}
+  UpdateEvent: {fileID: 0}
 --- !u!1 &500596175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,7 +1560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: {fileID: 316810154}
   Date: {fileID: 512795257}
-  ButtonTemplate: {fileID: 1722518855}
+  PositionMarker: {fileID: 1244014545}
 --- !u!1 &1094345669
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,29 +1642,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1094345672}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 658160019}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 375074882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1094345672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1803,6 +1778,7 @@ GameObject:
   - component: {fileID: 1244014536}
   - component: {fileID: 1244014535}
   - component: {fileID: 1244014534}
+  - component: {fileID: 1244014547}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -2072,6 +2048,19 @@ MonoBehaviour:
   latitude: -0.0000006195222841209891
   longitude: 0
   useSmartTexture: 1
+--- !u!114 &1244014547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244014532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4270ffba3252bc43b2567ea42dc77ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Map: {fileID: 1244014532}
 --- !u!1 &1417864128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,7 +2213,7 @@ GameObject:
   - component: {fileID: 1567229097}
   - component: {fileID: 1567229096}
   m_Layer: 5
-  m_Name: Confrim
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2800,29 +2789,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1722518853}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 658160019}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 375074882}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1722518853
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,10 +24,16 @@ namespace Interface
             var newEvent = newButton.GetComponent<Event>();
             newEvent.SetParams(name, date, coords);
 
+            newButton.GetComponentInChildren<Button>().onClick.AddListener(() => {
+                EventController.Instance.SetEvent(false, newEvent);
+            });
+
             if(transform.parent.childCount <= 2) return;
 
             var rect = transform.parent.gameObject.GetComponent<RectTransform>();
             rect.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, rect.rect.height + 185f);
+
+
         }
 
         public void SetParams(string name, string date, Vector2 coords) {
